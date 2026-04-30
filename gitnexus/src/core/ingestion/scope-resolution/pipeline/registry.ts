@@ -8,7 +8,7 @@
  * phase picks it up automatically — no workflow changes, no
  * per-language pipeline phase file.
  */
-
+import { dartScopeResolver } from "../../languages/dart-scope-resolver.js";
 import { SupportedLanguages } from 'gitnexus-shared';
 import type { ScopeResolver } from '../contract/scope-resolver.js';
 import { pythonScopeResolver } from '../../languages/python/scope-resolver.js';
@@ -26,4 +26,5 @@ export const SCOPE_RESOLVERS: ReadonlyMap<SupportedLanguages, ScopeResolver> = n
   [SupportedLanguages.Python, pythonScopeResolver],
   [SupportedLanguages.CSharp, csharpScopeResolver],
   [SupportedLanguages.TypeScript, typescriptScopeResolver],
+  [SupportedLanguages.Dart, dartScopeResolver],
 ]);
